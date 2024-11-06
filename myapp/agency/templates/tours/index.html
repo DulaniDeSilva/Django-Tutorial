@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asia tours</title>
+    <link rel = "stylesheet" href="{% static 'styles/styles.css' %}">
+    
+</head>
+<body>
+    <h1> Asia touring schedule</h1>
+    <ul>
+        {% for tour in tours %}
+            <li>{{tour}}</li>
+        {% endfor %}
+    </ul>
+    <img src = "{% static 'images/dog.jpg' %}" alt="Logo">
+    <!-- <script src="{% static 'js/script.js' % }"></script> -->
+    <script src = "{% static 'js/script.js' %}"></script>
+</body>
+</html>

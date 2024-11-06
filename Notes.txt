@@ -1,0 +1,72 @@
+MVT architecture
+
+M - model
+datastructure/ database
+V - view
+http request and return http response 
+T - templates
+
+
+intalling django => 
+    >>pip install django
+
+django-admin startproject myapp
+
+crete an application:
+    >> cd myapp 
+    >> python manage.py startapp nameofapplication
+update settings installed_apps
+
+running the application
+    >>python manage.py runserver
+
+
+in settings.py => installed_apps
+    >> type 'agency'
+
+Migrations
+    >>python manage.py makemigrations
+apply migrations to the database   
+    >> python manage.py migrate
+
+
+Adding database records: IP python documentation look
+    >> python manage.py shell
+        >>from agency.models import Tour
+        >> to1 = Tour(origin_country = "Japan", destination_country = "China", number_of_nights = 10, price = 2000)
+        >> to1.save
+
+        >> to2 = Tour(origin_country = "Sri Lanka", destination_country = "USA", number_of_nights = 20, price = 5000)
+        >> to2.save()
+
+templates
+    agency => templates => tours
+    django templating languge
+
+admin
+    >> python manage.py createsuperuser
+    >>hp, Dulani@1
+
+Save and render static assets [styles, images adn js files]
+    static file storages
+    configurations
+        settings => STATIC_URL = 'static/'
+        import os
+        STATIC_URL = 'static/'
+
+    MEDIA_URL = 'images/'
+
+    STATICFILES_DIR = (
+        os.path.join(BASE_DIR, 'static')
+    )
+
+
+FORMS
+
+
+Authentication
+
+
+        
+
+

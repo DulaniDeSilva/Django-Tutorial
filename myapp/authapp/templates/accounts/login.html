@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel = "stylesheet" type = "text/css" href="{% statis 'styles/styles.css' %}" >
+
+</head>
+<body>
+    <div class="container">
+        <h2> Login </h2>
+        <form method = "POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <input type = "hidden" name = "next" value = "{{next}}">
+            <div>
+                <label for "username" >UserName</label>
+                <input type = "text" name = "username" id = "username" required>
+
+                <label for "password">Password</label>
+                <input type = "text" name = "password" id = "password" required>
+
+                <button type="submit"> Submit </button>
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>
